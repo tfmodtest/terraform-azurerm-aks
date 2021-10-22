@@ -324,3 +324,9 @@ variable "node_resource_group" {
   type        = string
   default     = null
 }
+
+variable "only_critical_addons_enabled" {
+  description = "Enabling this option will taint default node pool with CriticalAddonsOnly=true:NoSchedule taint. Changing this forces a new resource to be created."
+  type        = bool
+  default     = null
+}
