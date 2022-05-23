@@ -418,6 +418,7 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 | Name                                                                                                                                               | Description |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| <a name="output_addon_profile"></a> [addon\_profile](#output\_addon\_profile)                                                                      | n/a         |
 | <a name="output_admin_client_certificate"></a> [admin\_client\_certificate](#output\_admin\_client\_certificate)                                   | n/a         |
 | <a name="output_admin_client_key"></a> [admin\_client\_key](#output\_admin\_client\_key)                                                           | n/a         |
 | <a name="output_admin_cluster_ca_certificate"></a> [admin\_cluster\_ca\_certificate](#output\_admin\_cluster\_ca\_certificate)                     | n/a         |
