@@ -419,3 +419,9 @@ variable "secret_rotation_interval" {
   default     = "2m"
   nullable    = false
 }
+
+variable "private_dns_zone_id" {
+  description = "(Optional) Either the ID of Private DNS Zone which should be delegated to this Cluster, System to have AKS manage this or None. In case of None you will need to bring your own DNS server and set up resolving, otherwise cluster will have issues after provisioning. Changing this forces a new resource to be created."
+  type        = string
+  default     = null
+}
