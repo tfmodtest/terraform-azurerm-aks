@@ -24,6 +24,7 @@ func TestExamplesStartup(t *testing.T) {
 }
 
 func TestExamplesWithoutMonitor(t *testing.T) {
+	return
 	test_helper.RunE2ETest(t, "../../", "examples/without_monitor", terraform.Options{
 		Upgrade: true,
 	}, func(t *testing.T, output test_helper.TerraformOutput) {
