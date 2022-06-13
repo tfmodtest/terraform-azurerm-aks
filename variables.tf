@@ -330,3 +330,9 @@ variable "node_resource_group" {
   type        = string
   default     = null
 }
+
+variable "unused_variable" {
+  description = "This is an unused variable and should be stopped by tflint."
+  type        = string
+  default     = null
+}
