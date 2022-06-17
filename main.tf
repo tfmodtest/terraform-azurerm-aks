@@ -107,11 +107,9 @@ resource "azurerm_kubernetes_cluster" "main" {
     content {
       log_analytics_workspace_id = azurerm_log_analytics_workspace.main[0].id
     }
-
-    open_service_mesh {
-      enabled = var.enable_open_service_mesh
-    }
   }
+
+  open_service_mesh_enabled = var.enable_open_service_mesh
 
   dynamic "ingress_application_gateway" {
     for_each = var.enable_ingress_application_gateway ? ["ingress_application_gateway"] : []
