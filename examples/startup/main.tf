@@ -43,7 +43,6 @@ module "aks" {
   disk_encryption_set_id           = azurerm_disk_encryption_set.des.id
   azure_policy_enabled             = true
   enable_http_application_routing  = true
-  enable_azure_policy              = true
   enable_host_encryption           = true
   enable_role_based_access_control = true
   rbac_aad_managed                 = true
