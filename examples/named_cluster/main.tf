@@ -44,6 +44,7 @@ module "aks_cluster_name" {
   resource_group_name                  = local.resource_group.name
   disk_encryption_set_id               = azurerm_disk_encryption_set.des.id
   enable_role_based_access_control     = true
+  azure_policy_enabled                 = true
   rbac_aad_managed                     = true
   enable_log_analytics_workspace       = true
   private_cluster_enabled              = true

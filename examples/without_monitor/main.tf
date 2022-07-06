@@ -36,6 +36,7 @@ module "aks_without_monitor" {
   prefix                           = "prefix2-${random_id.prefix.hex}"
   resource_group_name              = local.resource_group.name
   disk_encryption_set_id           = azurerm_disk_encryption_set.des.id
+  azure_policy_enabled             = true
   enable_role_based_access_control = true
   private_cluster_enabled          = true
   rbac_aad_managed                 = true
