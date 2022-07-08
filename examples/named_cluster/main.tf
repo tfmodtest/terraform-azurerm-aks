@@ -51,5 +51,6 @@ module "aks_cluster_name" {
   cluster_log_analytics_workspace_name = "test-cluster"
   net_profile_pod_cidr                 = "10.1.0.0/16"
   identity_type                        = "UserAssigned"
+  local_account_disabled               = true
   identity_ids                         = [azurerm_user_assigned_identity.test.id]
 }

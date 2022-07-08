@@ -43,4 +43,6 @@ module "aks_without_monitor" {
   #checkov:skip=CKV_AZURE_4:The logging is turn off for demo purpose. DO NOT DO THIS IN PRODUCTION ENVIRONMENT!
   enable_log_analytics_workspace = false
   net_profile_pod_cidr           = "10.1.0.0/16"
+
+  local_account_disabled = true
 }
