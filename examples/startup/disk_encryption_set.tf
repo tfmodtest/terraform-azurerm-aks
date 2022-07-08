@@ -62,13 +62,8 @@ resource "azurerm_key_vault_key" "des_key" {
 
 resource "azurerm_disk_encryption_set" "des" {
   name                = "des"
-<<<<<<< HEAD:examples/startup/disk_encryption_set.tf
   location            = local.resource_group.location
   resource_group_name = local.resource_group.name
-=======
-  location            = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
->>>>>>> 5aad7b2 (Add support for disk encryption set.):test/fixture/disk_encryption_set.tf
   key_vault_key_id    = azurerm_key_vault_key.des_key.id
 
   identity {
@@ -93,11 +88,7 @@ resource "azurerm_key_vault_access_policy" "current_user" {
   key_vault_id = azurerm_key_vault.des_vault.id
 
   tenant_id = data.azurerm_client_config.current.tenant_id
-<<<<<<< HEAD:examples/startup/disk_encryption_set.tf
   object_id = coalesce(var.managed_identity_principal_id, data.azurerm_client_config.current.object_id)
-=======
-  object_id = data.azurerm_client_config.current.object_id
->>>>>>> 5aad7b2 (Add support for disk encryption set.):test/fixture/disk_encryption_set.tf
 
   key_permissions = [
     "Get",
