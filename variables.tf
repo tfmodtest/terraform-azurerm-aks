@@ -1,4 +1,4 @@
-variable "resource_group_name" {
+variable "rg_name" {
   description = "The resource group name to be imported"
   type        = string
 }

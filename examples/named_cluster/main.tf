@@ -41,7 +41,7 @@ module "aks_cluster_name" {
   source                               = "../.."
   cluster_name                         = "test-cluster"
   prefix                               = "prefix"
-  resource_group_name                  = local.resource_group.name
+  rg_name                              = local.resource_group.name
   disk_encryption_set_id               = azurerm_disk_encryption_set.des.id
   enable_role_based_access_control     = true
   rbac_aad_managed                     = true
