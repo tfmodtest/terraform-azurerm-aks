@@ -23,6 +23,8 @@ jobs:
           https://api.github.com/repos/${{ github.repository }}/pulls?base=main)
           export pr_number=$(echo "$response" | jq '.[].number')
           
+          echo $response
+          
           echo "=====> Warn pull requests branch"
           
           for p in $pr_number; do
