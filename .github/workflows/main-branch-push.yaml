@@ -8,9 +8,9 @@ on:
 jobs:
   main-branch-push:
     runs-on: ubuntu-latest
-#    permissions:
-#      issues: write
-#      pull-requests: write
+    permissions:
+      issues: write
+      pull-requests: write
     steps:
       - uses: 8BitJonny/gh-get-current-pr@2.1.0
         id: PR
@@ -20,7 +20,7 @@ jobs:
           response=$(curl \
           -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/${{ github.repository }}/pulls?base=main)
+          https://api.github.com/repos/${{ github.repository }}/pulls?per_page=100)
           export pr_number=$(echo "$response" | jq '.[].number')
           
           echo $response
