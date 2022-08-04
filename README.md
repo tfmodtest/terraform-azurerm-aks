@@ -13,25 +13,25 @@ We suggest contributors running `make pre-commit` command before commit the code
 We also provide a docker container to run the check:
 
 ```shell
-$ docker run --rm -v $(pwd):/src -w /src aztfmod.azurecr.io/testrunner/tfmodule-testrunner make pr-check
+$ docker run --rm -v $(pwd):/src -w /src aztfmod.azurecr.io/testrunner/tfmodule-testrunner:local make pr-check
 ```
 
 On Windows:
 
 ```shell
-$ docker run --rm -v ${pwd}:/src -w /src aztfmod.azurecr.io/testrunner/tfmodule-testrunner make pr-check
+$ docker run --rm -v ${pwd}:/src -w /src aztfmod.azurecr.io/testrunner/tfmodule-testrunner:local make pr-check
 ```
 
 We can run the end-end tests via the following command:
 
 ```shell
-$ docker run --rm -v $(pwd):/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET aztfmod.azurecr.io/testrunner/tfmodule-testrunner make e2e-test
+$ docker run --rm -v $(pwd):/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET aztfmod.azurecr.io/testrunner/tfmodule-testrunner:local make e2e-test
 ```
 
 On Windows:
 
 ```shell
-$ docker run --rm -v ${pwd}:/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET aztfmod.azurecr.io/testrunner/tfmodule-testrunner make e2e-test
+$ docker run --rm -v ${pwd}:/src -w /src -e ARM_SUBSCRIPTION_ID -e ARM_TENANT_ID -e ARM_CLIENT_ID -e ARM_CLIENT_SECRET aztfmod.azurecr.io/testrunner/tfmodule-testrunner:local make e2e-test
 ```
 
 ## Deploys a Kubernetes cluster on AKS with monitoring support through Azure Log Analytics
@@ -451,3 +451,4 @@ No modules.
 | <a name="output_username"></a> [username](#output\_username)                                                                                        | n/a                                                                                                    |
 <!-- END_TF_DOCS -->
 
+END

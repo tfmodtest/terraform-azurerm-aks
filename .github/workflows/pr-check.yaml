@@ -1,13 +1,17 @@
 name: Pre Pull Request Check
 on:
   pull_request:
-    types: ['opened', 'synchronize']
+    types: [ 'opened', 'synchronize' ]
     paths:
       - '.github/**'
       - '**.go'
       - '**.tf'
       - '.github/workflows/**'
       - '**.md'
+
+env:
+  TFLINT_CONFIG: '.tflint_alternative.hcl'
+  SKIP_CHECKOV: true
 
 jobs:
   prepr-check:
