@@ -56,3 +56,5 @@ private_ssh_key
 README-generated.md
 
 **/override.tf
+
+/tfmod-scaffold/
