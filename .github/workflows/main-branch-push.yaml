@@ -8,9 +8,9 @@ on:
 jobs:
   main-branch-push:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
+#    permissions:
+#      issues: write
+#      pull-requests: write
     steps:
       - uses: 8BitJonny/gh-get-current-pr@2.1.0
         id: PR
