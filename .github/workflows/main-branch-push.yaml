@@ -13,14 +13,14 @@ jobs:
       checks: write
       contents: write
       deployments: write
-      id-token: write
+#      id-token: write
       issues: write
       discussions: write
-      packages: write
-      pages: write
+#      packages: write
+#      pages: write
       pull-requests: write
       repository-projects: write
-      security-events: write
+#      security-events: write
       statuses: write
     steps:
       - uses: 8BitJonny/gh-get-current-pr@2.1.0
