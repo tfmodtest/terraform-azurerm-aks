@@ -9,6 +9,9 @@ on:
       - '.github/workflows/**'
       - '**.md'
 
+env:
+  TFLINT_CONFIG: '.tflint_alternative.hcl'
+
 jobs:
   prepr-check:
     runs-on: ubuntu-latest
