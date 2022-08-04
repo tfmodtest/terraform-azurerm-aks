@@ -9,19 +9,19 @@ jobs:
   main-branch-push:
     runs-on: ubuntu-latest
     permissions:
-      actions: write
-      checks: write
+#      actions: write
+#      checks: write
       contents: write
-      deployments: write
+#      deployments: write
 #      id-token: write
       issues: write
-      discussions: write
+#      discussions: write
 #      packages: write
 #      pages: write
       pull-requests: write
-      repository-projects: write
+#      repository-projects: write
 #      security-events: write
-      statuses: write
+#      statuses: write
     steps:
       - uses: 8BitJonny/gh-get-current-pr@2.1.0
         id: PR
