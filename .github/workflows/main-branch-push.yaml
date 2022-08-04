@@ -11,7 +11,6 @@ jobs:
     permissions:
       issues: write
       pull-requests: write
-      repository-projects: write
     steps:
       - uses: 8BitJonny/gh-get-current-pr@2.1.0
         id: PR
